@@ -20,17 +20,17 @@ body {
 }
 
 .bg1 {
-    background-image: url("image/P1.jpg");
+    background-image: url("image/P5.png");
     opacity: 1;
 }
 
 .bg2 {
-    background-image: url("image/P2.jpg");
+    background-image: url("image/P3.jpg");
     opacity: 0;
 }
 
 .bg3 {
-    background-image: url("image/P3.jpg");
+    background-image: url("image/P6.png");
     opacity: 0;
 }
 
