@@ -1,0 +1,25 @@
+.page1, .page2, .page3 {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page1 {
+    background-image: url("../image/Easter_Egg.jpg");
+}
+
+.page2 {
+    background-image: url("../image/Easter_Egg2.jpg");
+    display: none;
+}
+
+.page3 {
+    background-image: url("../image/Easter_Egg3.png");
+    display: none;
+}
+
+body {
+    margin: 0;
+}
