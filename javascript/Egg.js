@@ -12,7 +12,7 @@ function showPage(index) {
 }
 
 document.addEventListener("click", () => {
-    currentPage = (currentPage + 1) % pages.length;
+    currentPage = (currentPage + 1) % pages.length;//到length长度会取模回到0
     showPage(currentPage);
 });
 

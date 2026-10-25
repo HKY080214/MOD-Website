@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    min-width: 750px;
 }
 
 /* 全屏背景容器 */
@@ -22,26 +23,46 @@ body {
     
 }
 
-.navbar {
-    position: sticky;
-    top: 0; /*距离视图顶部*/
-    left: 0; /*距离视图左侧*/
-    width: 100%; /*宽度*/
-    height: 100px; /*高度*/
-    background-color: rgba(0, 0, 0, 0.95); /*背景颜色（rgb+alpha）*/
-    color: #fff; /*文字颜色*/
-    z-index: 2; /*层级*/
-    display: flex; /*使用flex布局*/
-    justify-content: center;/*水平居中*/
-    align-items: center;/*垂直居中*/
-    gap: 200px;/*子元素之间的间距*/
+.logo {
+    flex-shrink: 0;
+    padding-right: 40px;
 }
 
-.navbar a {
-    color: #ff0000; /*文字颜色*/
-    text-decoration: none; /*去掉下划线*/
-    font-size: 60px; /*字体大小*/
-    margin-right: 10px; /*右边距*/
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    min-height: 100px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    flex: 1; /* 占满 Logo 之外的剩余空间 */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.bar a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 40px;
+    white-space: nowrap;
+}
+
+#logo img {
+    display: block;
+    width: 60px;
+    height: auto;
 }
 
 /* 鼠标移动到链接上 */
@@ -52,14 +73,32 @@ body {
 .content {
     position: relative;
     z-index: 1;
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-left: 150px;
     color: white;
-    text-align: center;
     opacity: 0;
 }
 
 .content.show {
     animation: fadeInUp 2s ease-out both;
+}
+
+p {
+    color: rgb(128, 128, 128)
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0000005f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.project-btn:hover {
+    background-color: #ca5101b9;
 }
 
 @keyframes fadeInUp {
